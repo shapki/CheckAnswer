@@ -7,11 +7,26 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtCorrectNotCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="258dp"
+        android:text=" НЕ ПРАВИЛЬНО"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimeMin" />
+
+    <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textStyle="bold"
         android:text="Итого проверено примеров"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +48,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Правильно"
+        android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAllExamples" />
 
@@ -42,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:text="Не правильно"
+        android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView7" />
 
@@ -69,8 +88,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="ВРЕМЯ (сек)"
+        android:layout_marginTop="46dp"
+        android:text="ВРЕМЯ: 00:00.00"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNumberRight" />
@@ -82,6 +103,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Минимум"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -90,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Максимум"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
@@ -100,6 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:text="Среднее"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
@@ -107,7 +131,7 @@
         android:id="@+id/txtTimeMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="00:00.00"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -117,7 +141,7 @@
         android:id="@+id/txtTimeMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="00:00.00"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
@@ -127,7 +151,7 @@
         android:id="@+id/txtTimeAverage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.00"
+        android:text="00:00.00"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -137,7 +161,7 @@
         android:id="@+id/txtPercentageCorrectAnswers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:text="0.00%"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -147,9 +171,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutExample"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="232dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="58dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,9 +182,9 @@
         <TextView
             android:id="@+id/txtFirstOperand"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="00"
-            android:textSize="24sp" />
+            android:textSize="44sp" />
 
         <TextView
             android:id="@+id/txtOperation"
@@ -169,14 +193,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:text="+"
-            android:textSize="24sp" />
+            android:textSize="44sp" />
 
         <TextView
             android:id="@+id/txtTwoOperand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:textSize="24sp" />
+            android:textSize="44sp" />
 
         <TextView
             android:id="@+id/txtEqually"
@@ -185,14 +209,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:text="="
-            android:textSize="24sp" />
+            android:textSize="44sp" />
 
         <TextView
             android:id="@+id/txtResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:textSize="24sp" />
+            android:textSize="44sp" />
     </LinearLayout>
 
     <Button
@@ -200,17 +224,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#8e24aa"
         android:text="ВЕРНО"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutExample" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorrectNotCorrect" />
 
     <Button
         android:id="@+id/btnWrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#8e24aa"
         android:text="НЕВЕРНО"
         app:layout_constraintEnd_toEndOf="parent"
